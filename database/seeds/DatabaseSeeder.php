@@ -7,11 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
     public function run()
     {
         // $this->call('UsersTableSeeder');
@@ -31,5 +27,12 @@ class DatabaseSeeder extends Seeder
             'updated_at' => Carbon::now()
         ]);
 
+        DB::table('authors')->insert([
+            'name' => 'Cita Aji Pangesti',
+            'gender' => 'female',
+            'biography' => 'Still trying to finish college . ',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+            ]);
+        }
     }
-}
